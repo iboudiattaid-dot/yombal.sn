@@ -40,6 +40,20 @@ Format : [YYYY-MM-DD] — Code mission — Description
 - Correction : propriétés WooCommerce dépréciées remplacées (`$order->id` → `$order->get_id()`, etc.).
 - Plugin PayTech corrigé exporté vers `src/plugins/paytech_woocommerce/`.
 
+## 2026-04-24 — YOMBAL-DOCKER-01
+
+- Installation Docker Engine 29.4.1 + Docker Compose v5.1.3 dans WSL2 Ubuntu.
+- Résolution blocage : serveur dans VM → Docker Desktop sans virtualisation imbriquée → Docker Engine direct dans WSL2.
+- Démarrage des 5 containers Yombal (yombal_wp:8080, yombal_db:3306, yombal_pma:8081, yombal_mailhog:8025, yombal_wpcli).
+- Correction volume `wp_core` partagé entre wordpress et wpcli (résout "This does not seem to be a WordPress installation").
+- Correction mismatch uid www-data Alpine/Debian (chmod 777 sur wp-content/upgrade).
+- WordPress 6.7.2 installé et opérationnel via WP-CLI.
+- WooCommerce 9.4.3 installé et activé (version compatible WP 6.7).
+- Elementor 4.0.3 installé et activé.
+- Plugin yombal-core v0.4.15 actif + 15 mu-plugins actifs.
+- WooCommerce configuré : devise XOF, pays SN (Sénégal), adresse Dakar.
+- Staging accessible : http://localhost:8080 | Admin : http://localhost:8080/wp-admin.
+
 ## 2026-04-24 — YOMBAL-STAGING-01
 
 - Installation Ubuntu WSL2 pour Docker Desktop Linux engine.
