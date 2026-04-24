@@ -2,7 +2,10 @@
 wp-config.php
 wp-config-sample.php
 .env
-.env.*
+.env.local
+.env.production
+.env.staging
+!.env.example
 
 # Bases de données
 *.sql
