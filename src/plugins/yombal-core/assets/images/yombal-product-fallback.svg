@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Yombal product fallback</title>
+  <desc id="desc">Branded textile-inspired placeholder image for products without photos.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#0d2454"/>
+      <stop offset="58%" stop-color="#1f4d9f"/>
+      <stop offset="100%" stop-color="#18c2d4"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#f0a534" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#ffd17f" stop-opacity="0.82"/>
+    </linearGradient>
+    <pattern id="weave" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M0 32h64M32 0v64" stroke="rgba(255,255,255,0.16)" stroke-width="2"/>
+      <path d="M0 0l64 64M64 0L0 64" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <rect width="1200" height="900" fill="url(#weave)" opacity="0.7"/>
+  <circle cx="1035" cy="146" r="168" fill="#ffffff" opacity="0.08"/>
+  <circle cx="152" cy="780" r="210" fill="#f0a534" opacity="0.14"/>
+  <path d="M240 240c74-74 178-116 308-116 211 0 382 105 382 234 0 126-171 232-382 232-128 0-238-38-313-109 56 11 119 17 186 17 177 0 320-72 320-161S598 176 421 176c-66 0-128 10-181 28Z" fill="#ffffff" opacity="0.18"/>
+  <path d="M300 652c68-98 183-154 325-154 146 0 265 58 333 164-85-34-183-54-289-54-129 0-251 29-369 84Z" fill="url(#accent)" opacity="0.92"/>
+  <g fill="#ffffff" opacity="0.92">
+    <path d="M477 293c44 0 80 36 80 80s-36 80-80 80-80-36-80-80 36-80 80-80Zm0 48c-18 0-32 14-32 32s14 32 32 32 32-14 32-32-14-32-32-32Z"/>
+    <path d="M643 293c44 0 80 36 80 80s-36 80-80 80-80-36-80-80 36-80 80-80Zm0 48c-18 0-32 14-32 32s14 32 32 32 32-14 32-32-14-32-32-32Z"/>
+    <path d="M411 248h298v24H411z"/>
+  </g>
+  <g fill="#ffffff">
+    <text x="96" y="760" font-family="Avenir Next, Segoe UI, Arial, sans-serif" font-size="46" font-weight="700" letter-spacing="8">YOMBAL</text>
+    <text x="96" y="818" font-family="Avenir Next, Segoe UI, Arial, sans-serif" font-size="28" opacity="0.8" letter-spacing="3">IMAGE PRODUIT A COMPLETER</text>
+  </g>
+</svg>

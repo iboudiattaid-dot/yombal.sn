@@ -20,3 +20,12 @@ Format : [YYYY-MM-DD] — Code mission — Description
 - Création du dossier assets-reference/.
 - Création du dossier scripts/.
 - Premier commit et push sur la branche main.
+
+## 2026-04-24 — YOMBAL-EXPORT-01
+
+- Export du plugin personnalisé `yombal-core` vers `src/plugins/yombal-core/`.
+- Export des 15 mu-plugins Yombal vers `src/mu-plugins/`.
+- Correction sécurité : suppression du mot de passe fixture hardcodé dans `class-journey-lab.php` → remplacé par constante `YOMBAL_FIXTURE_PASSWORD` (à définir dans wp-config.php).
+- Correction sécurité : suppression du mot de passe admin hardcodé dans `scripts/setup-wp.sh` → remplacé par variable d'environnement `WP_ADMIN_PASSWORD`.
+- Export de l'inventaire des URLs WordPress vers `exports/wordpress/pages-urls-export.csv`.
+- Export de tous les scripts utilitaires vers `scripts/`.
