@@ -80,6 +80,32 @@ bash scripts/setup-wp.sh
 - Ne jamais mettre les mots de passe de production dans `.env` local.
 - Les credentials de prod (FTP, BDD) ne doivent être renseignés que si nécessaire, en local uniquement.
 
+## Environnement virtualisé (VM)
+
+Si ce serveur tourne déjà dans une VM (VPS OVH, AWS EC2, etc.), Docker Desktop ne peut pas démarrer son propre moteur virtuel (pas de virtualisation imbriquée).
+
+**Solution : Docker Engine directement dans WSL2**
+
+```bash
+# Dans WSL2 Ubuntu
+export DEBIAN_FRONTEND=noninteractive
+apt-get update -qq
+apt-get install -y ca-certificates curl gnupg
+install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+echo 'deb [arch=amd64 signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu noble stable' > /etc/apt/sources.list.d/docker.list
+apt-get update -qq
+apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
+service docker start
+```
+
+Puis configurer les paths pour que `docker compose` soit disponible depuis Windows/bash :
+
+```bash
+# Dans ~/.bashrc de WSL2
+export DOCKER_HOST=unix:///var/run/docker.sock
+```
+
 ## Troubleshooting
 
 | Problème | Solution |
