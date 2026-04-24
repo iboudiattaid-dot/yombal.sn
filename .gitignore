@@ -1,0 +1,58 @@
+# WordPress sensible
+wp-config.php
+wp-config-sample.php
+.env
+.env.*
+
+# Bases de données
+*.sql
+*.sqlite
+*.sqlite3
+
+# Archives et sauvegardes
+*.zip
+*.tar.gz
+*.tar
+*.gz
+*.bak
+*.backup
+*.old
+
+# Logs
+*.log
+debug.log
+error.log
+
+# Cache WordPress
+wp-content/cache/
+wp-content/litespeed/
+wp-content/backup*/
+wp-content/updraft/
+wp-content/ai1wm-backups/
+wp-content/wfcache/
+
+# Médias (lourds, non versionnés)
+wp-content/uploads/
+
+# Plugins premium (non redistribuables)
+# Lister ici les plugins premium si nécessaire
+
+# Node / PHP dependencies
+node_modules/
+vendor/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Fichiers temporaires
+tmp-*
+*.tmp
+~$*
